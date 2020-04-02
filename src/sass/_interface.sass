@@ -69,3 +69,22 @@
       .policy__label
         &::before
           background: $primary url('../img/check.svg') no-repeat center
+
+.slider
+  &-swiper
+    &-button
+      &-next,
+      &-prev
+        width: 36px
+        height: 36px
+        border-radius: 50%
+        position: absolute
+        z-index: 1
+        top: 0
+      &-next
+        left: -18px
+        background: $primary url('../img/button-arrow.svg') no-repeat left 13px center
+      &-prev
+        right: -18px
+        background: $primary url(../img/button-arrow.svg) no-repeat left 13px center
+        transform: scaleX(-1)

@@ -1,3 +1,4 @@
+// $(document).ready(function () {
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 
@@ -12,3 +13,43 @@ var promoSwiper = new Swiper('.promo-swiper', {
     clickable: true
   }
 })
+
+// Services Slider
+var servicesSwiper = new Swiper('.services-swiper', {
+  slidesPerView: 'auto',
+  spaceBetween: 13,
+  // slidesPerGroup: 1,
+  loop: true,
+  // loopedSlides: 5,
+
+  navigation: {
+    nextEl: '.slider-swiper-button-next',
+    prevEl: '.slider-swiper-button-prev'
+  }
+})
+// console.log('SB = ' + servicesSwiper.params.spaceBetween)
+
+// function sliderSB () {
+//   var servicesSwiperWidth = $('.services-swiper').width()
+//   var servicesSlideWidth = $('.services-slide').width()
+//   var servicesSlideCount = Math.trunc(servicesSwiperWidth / servicesSlideWidth)
+//   return (servicesSwiperWidth - servicesSlideWidth * servicesSlideCount) / (servicesSlideCount - 1)
+// }
+
+$(window).resize(function () {
+  $('.services-swiper').parent().width(swiperWidth())
+})
+// })
+$('.services-swiper').parent().width(swiperWidth())
+function swiperWidth () {
+  var servicesSwiperWidth = 0
+  var servicesSwiperWrapper = $('.services-swiper').parent().parent().width()
+  var servicesSlideWidth = $('.services-slide').width()
+  var spaceBetween = servicesSwiper.params.spaceBetween
+  var maxSize = servicesSwiperWrapper - servicesSlideWidth - spaceBetween
+
+  for (let index = 1; servicesSwiperWidth <= maxSize; index++) {
+    servicesSwiperWidth = servicesSlideWidth * index + spaceBetween * (index - 1)
+  }
+  return servicesSwiperWidth
+}
