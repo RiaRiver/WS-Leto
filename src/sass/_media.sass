@@ -46,6 +46,16 @@
   .club
     width: 75%
     margin-bottom: 20px
+  
+  .visit
+    padding: 2.5rem 0
+
+  .input
+    flex-basis: 80%
+    
+  .policy
+    order: 0
+    margin-bottom: 20px
 
 @media screen and ( max-width: 576px )
   .club-choise
@@ -62,6 +72,13 @@
 
   .branch
     background-position: left 5% top 30%, right 5% top 30%
+  
+  .visit
+    &::before
+      display: none
+
+  .input
+    flex-basis: 100%
 
   .swiper-container-horizontal>.swiper-pagination-bullets
     bottom: 5%

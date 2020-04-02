@@ -5,6 +5,7 @@
   font-size: rem(12px)
   font-weight: bold
   text-transform: uppercase
+  border-radius: 30px
   cursor: pointer
   &--primary
     background-color: $primary
@@ -14,5 +15,57 @@
     background-color: transparent
     color: $primary
     border: 1px solid $primary
-  &--rounded
-    border-radius: 30px
+
+.form
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  margin: auto
+  &__button
+    margin-bottom: rem(21px)
+
+.input
+  padding: rem(15px) rem(25px)
+  min-width: 268px
+  border-radius: 30px
+  border: none
+  color: #101010
+  font-size: 13px
+  font-weight: 300
+  flex-basis: 23.5%
+  margin-right: 6px
+  margin-bottom: rem(21px)
+  &::placeholder
+    opacity: 0.7
+    
+.policy
+  flex-basis: 100%
+  margin: 0 auto
+  order: 1
+  position: relative
+  &__label
+    display: flex
+    align-items: center
+    justify-content: center
+    color: $light
+    font-family: Roboto
+    font-size: 11px
+    font-weight: 400
+    line-height: 22.04px
+    text-transform: uppercase
+    &::before
+      content: ''
+      width: 18px
+      height: 18px
+      margin-right: 0.57rem
+      border: 1px solid rgba(0, 0, 0, 0.4)
+      border-radius: 1px
+      cursor: pointer
+      background-color: $light
+
+  &__checkbox
+    display: none
+    &:checked ~
+      .policy__label
+        &::before
+          background: $primary url('../img/check.svg') no-repeat center
