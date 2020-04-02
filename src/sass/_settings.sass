@@ -1,0 +1,42 @@
+*, *:before, *:after
+  box-sizing: border-box
+
+*:focus
+  outline-color: $primary
+
+html
+  font-size: $basic-fz
+  // overflow-x: hidden
+
+body
+  font-family: Roboto, sans-serif
+  font-size: 1rem
+  font-weight: normal
+
+img
+  max-width: 100%
+
+.phone
+  &__label
+    display: block
+    margin-bottom: 4px
+    font-size: rem(12px)
+    font-weight: 300
+    text-align: right
+    color: $light
+
+  &__number
+    font-size: rem(19px)
+    font-weight: 700
+    text-decoration: none
+    color: $light
+
+.swiper-pagination
+  .swiper-pagination-bullet
+    width: 20px
+    height: 4px
+    background-color: $light
+    opacity: 1
+    border-radius: 5px
+    &-active
+      background-color: $primary
