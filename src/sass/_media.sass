@@ -5,9 +5,10 @@
         font-size: 12.5px
 
 @media screen and ( max-width: 1200px )
-  .club-choise,
-  .visit-signup
-    margin: auto
+  .header
+    &__club-choise,
+    &__visit-signup
+      margin: auto
 
   .promo
     &-slide
@@ -23,22 +24,31 @@
 @media screen and ( max-width: 992px )
   html
     font-size: 12px
-
-  .visit-signup
-    display: none
-  
+  .header
+    &__visit-signup
+      display: none
+    
   .promo
     &-slide
       &__container
         font-size: 8.5px
+
+  .footer
+    &-menu
+      justify-content: space-around
+      align-items: center
+    &-nav
+      order: 1
+      width: 80%
+      margin-top: 20px
 
 @media screen and ( max-width: 768px )
   .header
     &__button 
       display: none
 
-  .nav
-    display: none
+    &-nav
+      display: none
 
   .promo
     &-slide
@@ -76,9 +86,18 @@
       width: 80%
       min-width: 300px
 
+  .footer
+    &-menu
+    &__contact
+      margin: 0 0 0
+    &-nav
+      width: 95%
+
+
 @media screen and ( max-width: 576px )
-  .club-choise
-    display: none
+  .header
+    &__club-choise
+      display: none
 
   .promo
     &-slide
@@ -101,3 +120,27 @@
 
   .swiper-container-horizontal>.swiper-pagination-bullets
     bottom: 5%
+    
+  .footer
+    &__club-choise
+      display: none
+    &-nav
+      &__block
+        margin-left: auto
+        margin-right: 20%
+        &:nth-last-of-type(2)
+          margin-right: auto
+    &__info
+      flex-direction: column
+  .copyright
+    margin-bottom: 20px
+
+  .social
+    &__link
+      width: 30px
+      height: 30px
+
+@media screen and ( max-width: 375px )
+  .copyright
+    width: 53%
+    text-align: center

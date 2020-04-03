@@ -17,15 +17,15 @@
           <img src="img/logo.svg" alt="logo" class="logo__image">
         </a>
 
-        <button class="button club-choise button--outline">Выбрать клуб</button>
+        <button class="button header__club-choise button--outline">Выбрать клуб</button>
 
-        <div class="visit-signup">Записаться на<br>бесплатный визит</div>
+        <div class="header__visit-signup">Записаться на<br>бесплатный визит</div>
 
-        <div class="phone menu__phone">
-          <span class="phone__label">Звоните круглосуточно!</span>
-          <a href="tel:+74952660278" class="phone__number">+7 (495) 266 02 78</a>
+        <div class="contact header__contact">
+          <span class="contact__label">Звоните круглосуточно!</span>
+          <a href="tel:+74952660278" class="contact__number">+7 (495) 266 02 78</a>
         </div>
-        <!-- /.phone menu__phone -->
+        <!-- /.contact menu__contact -->
         <button class="button header__button button--primary">Перезвоните
           мне</button>
       </div>
@@ -33,27 +33,27 @@
     </div>
     <!-- /.container -->
 
-    <nav class="nav header__nav">
-      <div class="container nav__container">
-        <a href="#" class="nav__item">Клубы</a>
+    <nav class="nav header-nav">
+      <div class="container header-nav__container">
+        <a href="#" class="header-nav__item">Клубы</a>
         <span class="separator"></span>
-        <a href="#" class="nav__item">Услуги</a>
+        <a href="#" class="header-nav__item">Услуги</a>
         <span class="separator"></span>
-        <a href="#" class="nav__item">Клубные карты</a>
+        <a href="#" class="header-nav__item">Клубные карты</a>
         <span class="separator"></span>
-        <a href="#" class="nav__item">Расписание</a>
+        <a href="#" class="header-nav__item">Расписание</a>
         <span class="separator"></span>
-        <a href="#" class="nav__item">Наши Тренеры</a>
+        <a href="#" class="header-nav__item">Наши Тренеры</a>
         <span class="separator"></span>
-        <a href="#" class="nav__item">Галерея</a>
+        <a href="#" class="header-nav__item">Галерея</a>
         <span class="separator"></span>
-        <a href="#" class="nav__item">Наши Акции</a>
+        <a href="#" class="header-nav__item">Наши Акции</a>
         <span class="separator"></span>
-        <a href="#" class="nav__item">Контакты</a>
+        <a href="#" class="header-nav__item">Контакты</a>
       </div>
       <!-- /.container -->
     </nav>
-    <!-- /.nav header__nav -->
+    <!-- /.nav header-nav -->
   </header>
   <!-- /.header -->
 
@@ -370,7 +370,7 @@
                     <strong class="branch__title cards-branch__title">Лето «Мозаика»</strong>
                     <span class="branch__address cards-branch__address">Россия, Москва, 7-я
                       Кожуховская ул., 9</span>
-                    </span>
+                  </span>
                   <!-- /.branch -->
                 </label>
                 <input type="radio" id="club2" name="club" value="Schelkovo">
@@ -379,7 +379,7 @@
                     <strong class="branch__title cards-branch__title">Лето «Щелково»</strong>
                     <span class="branch__address cards-branch__address">Россия, г. Щелково, ул.
                       Советская, д. 16</span>
-                    </span>
+                  </span>
                   <!-- /.branch -->
                 </label>
               </div>
@@ -410,6 +410,100 @@
     </section>
     <!-- /.section cards -->
   </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="menu footer-menu">
+        <a href="#" class="logo menu__logo">
+          <img src="img/logo.svg" alt="logo" class="logo__image">
+        </a>
+        <nav class="footer-nav">
+          <div class="footer-nav__block">
+            <h3 class="footer-nav__heading">«Лето»</h3>
+            <a href="" class="footer-nav__item">Клубы</a>
+            <a href="" class="footer-nav__item">Новости</a>
+            <a href="" class="footer-nav__item">Акции</a>
+            <a href="" class="footer-nav__item">Фотогалерея</a>
+            <a href="" class="footer-nav__item">Наши контакты</a>
+          </div>
+
+          <div class="footer-nav__block">
+            <h3 class="footer-nav__heading">Клиентам</h3>
+            <a href="" class="footer-nav__item">Клубные карты</a>
+            <a href="" class="footer-nav__item">Расписание</a>
+            <a href="" class="footer-nav__item">Услуги</a>
+            <a href="" class="footer-nav__item">Тренеры</a>
+          </div>
+
+          <div class="footer__club-choise">
+            <h3 class="footer-nav__heading">Выбрать клуб</h3>
+            <input type="radio" id="footer-club1" name="footer-club" value="Mozaika" checked>
+            <label for="footer-club1" class="footer__club">
+              <span class="branch footer-branch">
+                <strong class="branch__title footer-branch__title">Лето «Мозаика»</strong>
+                <span class="branch__address footer-branch__address">г. Москва, 7-я
+                  Кожуховская ул., 9</span>
+              </span>
+              <!-- /.branch -->
+            </label>
+
+            <input type="radio" id="footer-club2" name="footer-club" value="Mozaika" checked>
+            <label for="footer-club2" class="footer__club">
+              <span class="branch footer-branch">
+                <strong class="branch__title footer-branch__title">Лето «Щелково»</strong>
+                <span class="branch__address footer-branch__address">г. Щелково, ул.
+                  Советская, д. 16</span>
+              </span>
+              <!-- /.branch -->
+            </label>
+          </div>
+          <!-- /.footer__club-vhoise -->
+        </nav>
+        <!-- /.footer__nav -->
+        <div class="footer-contacts">
+          <div class="contact footer__contact">
+            <span class="contact__label">Единый телефон</span>
+            <a href="tel:+74952660278" class="contact__number">+7 (495) 266 02 78</a>
+          </div>
+          <!-- /.contact menu__contact -->
+          <button class="button header__button button--primary">Перезвоните
+            мне</button>
+        </div>
+        <!-- /.footer-contacts -->
+      </div>
+      <!-- /.menu footer__menu -->
+    </div>
+    <!-- /.container -->
+
+    <span class="footer-separator"></span>
+
+    <div class="container">
+      <div class="footer__info">
+        <span class="copyright">© Фитнес-центр «Лето», 2017. Все права защищены.</span>
+
+        <div class="social">
+          <a href="https://vk.com/" class="social__link" target="_blank">
+            <img src="img/vk.svg" alt="vk">
+          </a>
+          <a href="https://www.instagram.com/" class="social__link" target="_blank">
+            <img src="img/instagram.svg" alt="instagram">
+          </a>
+          <a href="https://www.youtube.com/" class="social__link" target="_blank">
+            <img src="img/youtube.svg" alt="youtube">
+          </a>
+          <a href="https://www.facebook.com/" class="social__link" target="_blank">
+            <img src="img/facebook.svg" alt="facebook">
+          </a>
+          <a href="https://twitter.com/" class="social__link" target="_blank">
+            <img src="img/twitter.svg" alt="twitter">
+          </a>
+        </div>
+        <!-- /.social -->
+      </div>
+      <!-- /.footer__info -->
+    </div>
+    <!-- /.container -->
+  </footer>
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/swiper.min.js"></script>
   <script src="js/main.js"></script>
