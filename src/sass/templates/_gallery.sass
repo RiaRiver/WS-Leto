@@ -1,0 +1,32 @@
+.gallery
+  padding: rem(25px) 0 rem(32px)
+  &-bg
+    position: relative
+    background: linear-gradient(to right, #561a36 0%, #1e1c34 100%) no-repeat
+    background-size: 100% 69.5%
+    background-position: center
+    &::before
+      position: absolute
+      top: 0
+      left: 0
+      content: ''
+      height: 100%
+      width: 100%
+      background: url(../img/gallery-bg.png) no-repeat
+      background-size: auto 69.5%
+      background-position: center
+      opacity: 0.3
+  &__container
+    max-width: 856px
+    position: relative
+    padding: 0 53px
+  &-swiper
+    &>.swiper-pagination-bullets
+      bottom: 9.05%
+  &-slide
+    &__image
+      display: block
+  &-button
+    &-next,
+    &-prev
+      top: calc(50% - 18px)
