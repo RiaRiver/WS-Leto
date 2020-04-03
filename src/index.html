@@ -69,7 +69,7 @@
                 <span class="promo-slide__overheading">2 круглосуточные</span>
                 <strong class="promo-slide__heading">клубные карты</strong>
                 <span class="promo-slide__subheading">за 22 000 <span
-                    class="rub">&#8381</span></span>
+                    class="rub">&#8381;</span></span>
               </div>
               <!-- /.promo-slide__title -->
               <p class="promo-slide__text">
@@ -89,7 +89,7 @@
                 class="promo-slide__title promo-slide__title--frame-2 promo-slide__title--size-2">
                 <span class="promo-slide__overheading">открытый чемпионат</span>
                 <strong class="promo-slide__heading">по бодибилдингу</strong>
-                <span class="promo-slide__subheading">приз 200 000 &#8381</span>
+                <span class="promo-slide__subheading">приз 200 000 &#8381;</span>
               </div>
               <!-- /.promo-slide__title -->
             </div>
@@ -123,10 +123,11 @@
               <h3 class="club__title"><span>Лето Мозаика</span></h3>
             </div>
             <!-- /.club__wrapper -->
-            <div class="branch">
-              <strong class="branch__title">«Лето» в ТРЦ «Мозаика»
+            <div class="branch club-branch">
+              <strong class="branch__title club-branch__title">«Лето» в ТРЦ «Мозаика»
               </strong>
-              <span class="branch__address">Россия, Москва, 7-я Кожуховская ул., 9</span>
+              <span class="branch__address club-branch__address">Россия, Москва, 7-я Кожуховская
+                ул., 9</span>
             </div>
             <!-- /.branch -->
           </a>
@@ -138,10 +139,11 @@
               <h3 class="club__title"><span>Лето Щелково</span></h3>
             </div>
             <!-- /.club__wrapper -->
-            <div class="branch">
-              <strong class="branch__title">«Лето» в БЦ Спиртзавод
+            <div class="branch club-branch">
+              <strong class="branch__title club-branch__title">«Лето» в БЦ Спиртзавод
               </strong>
-              <span class="branch__address">Россия, г. Щелково, ул. Советская, д. 16</span>
+              <span class="branch__address club-branch__address">Россия, г. Щелково, ул. Советская,
+                д. 16</span>
             </div>
             <!-- /.branch -->
           </a>
@@ -333,6 +335,80 @@
     </section>
     <!-- /.section gallery -->
 
+    <section class="section cards">
+      <div class="container">
+        <h3 class="section__heading">Клубные карты</h3>
+        <div class="row cards__row">
+          <div class="col-48 cards__col-1">
+            <div class="cards-image">
+              <img src="img/cards.png" alt="cards" class="cards-image__pre">
+              <img src="img/cards.png" alt="cards">
+              <img src="img/cards.png" alt="cards" class="cards-image__post">
+            </div>
+            <!-- /.cards-image -->
+          </div>
+          <!-- /.col-48 cards__col-1 -->
+
+          <div class="col-43 cards__col-2">
+            <form action="send.php" method="POST" class="form cards__form">
+              <div class="cards__periods">
+                <input type="radio" id="period1" name="period" value="1_month">
+                <label for="period1" class="cards__period">1 месяц</label>
+                <input type="radio" id="period2" name="period" value="6_months">
+                <label for="period2" class="cards__period">6 месяцев</label>
+                <input type="radio" id="period3" name="period" value="9_months">
+                <label for="period3" class="cards__period">9 месяцев</label>
+                <input type="radio" id="period4" name="period" value="12_months" checked>
+                <label for="period4" class="cards__period">12 месяцев</label>
+              </div>
+              <!-- /.cards__periods -->
+
+              <div class="cards__clubs">
+                <input type="radio" id="club1" name="club" value="Mozaika" checked>
+                <label for="club1" class="cards__club">
+                  <span class="branch cards-branch">
+                    <strong class="branch__title cards-branch__title">Лето «Мозаика»</strong>
+                    <span class="branch__address cards-branch__address">Россия, Москва, 7-я
+                      Кожуховская ул., 9</span>
+                    </span>
+                  <!-- /.branch -->
+                </label>
+                <input type="radio" id="club2" name="club" value="Schelkovo">
+                <label for="club2" class="cards__club">
+                  <span class="branch cards-branch">
+                    <strong class="branch__title cards-branch__title">Лето «Щелково»</strong>
+                    <span class="branch__address cards-branch__address">Россия, г. Щелково, ул.
+                      Советская, д. 16</span>
+                    </span>
+                  <!-- /.branch -->
+                </label>
+              </div>
+              <!-- /.cards__clubs -->
+
+              <input type="text" name="userName" class="input form__input cards__input"
+                id="cards-user-name" placeholder="Ваше имя*">
+
+              <input type="tel" name="userPhone" class="input form__input cards__input"
+                id="cards-user-phone" placeholder="Ваш номер телефона*">
+
+              <div class="policy cards-policy">
+                <input type="checkbox" name="policyCheckbox" id="cards-policy-checkbox"
+                  class="policy__checkbox" checked>
+                <label for="cards-policy-checkbox" class="policy__label cards-policy__label">Я
+                  согласен на обработку
+                  персональных данных</label>
+              </div>
+              <button class="button form__button button--primary cards__button">Забронировать
+                карту</button>
+            </form>
+          </div>
+          <!-- /.col-43 cards__col-2 -->
+        </div>
+        <!-- /.row cards__row -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /.section cards -->
   </main>
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/swiper.min.js"></script>

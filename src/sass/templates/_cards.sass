@@ -1,0 +1,97 @@
+.cards
+  padding: rem(26px) 0 rem(66px)
+  &__col-1
+    display: flex
+    justify-content: center
+    align-items: center
+  &-image
+    position: relative
+    width: 70%
+    &__pre,
+    &__post
+      position: absolute
+      z-index: -1
+      filter: blur(5px)
+      width: 100%
+    &__pre
+      top: 0
+      left: 0
+      transform: translate(-20%, -20%)
+    &__post
+      bottom: 0
+      right: 0
+      transform: translate(20%, 20%)
+    
+  &__form
+    flex-direction: column
+  &__periods
+    display: flex
+    justify-content: space-between
+    margin-bottom: 24px
+    flex-wrap: wrap
+  &__period
+    border: 1px solid #b7b7b7
+    background-color: #ffffff
+    padding: 15px 10px
+    border-radius: 30px
+    min-width: rem(120px)
+    width: 24%
+    text-align: center
+    font-size: rem(12px)
+    text-transform: uppercase
+  &__input
+    border: 1px solid #b7b7b7
+    width: 100%
+    font-size: 14px
+    margin-bottom: 12px
+    margin-right: 0px
+    &::placeholder
+      color: #94939a
+  &__clubs
+    margin-bottom: 4px
+  &__club
+    display: flex
+
+    &::before
+      content: ''
+      width: 21px
+      height: 21px
+      margin-right: 11px
+      border: 1px solid rgba(0, 0, 0, 0.4)
+      border-radius: 4px
+      cursor: pointer
+      background-color: white
+  &-branch
+    margin-bottom: 20px
+    &__title,
+    &__address
+      font-size: rem(16px)
+      margin-bottom: 3px
+  &-policy
+    align-self: flex-start
+    padding-left: 20px
+    margin-bottom: 18px
+    &__label
+      color: #94939a
+      font-weight: 300
+      &::before
+        min-width: 21px
+        height: 21px
+        border-radius: 4px
+        margin-right: 11px
+  &__button
+    min-width: 190px
+    align-self: flex-end
+        
+
+input[type=radio]
+    display: none
+
+input[name=period]:checked + label  
+    border: none
+    background-color: #ffd11a
+    transition: 0.3s
+
+input[name=club]:checked + label  
+    &::before
+      background: #ffd11a url('../img/check.svg') no-repeat center

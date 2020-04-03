@@ -13,6 +13,12 @@
     &-slide
       &__container
         font-size: 10.5px
+  .cards
+    &__periods
+      justify-content: space-around
+    &__period
+      width: 48%
+      margin-bottom: 20px
 
 @media screen and ( max-width: 992px )
   html
@@ -52,10 +58,23 @@
 
   .input
     flex-basis: 80%
+    margin-bottom: 12px
     
   .policy
     order: 0
     margin-bottom: 20px
+
+  .cards
+    &__row
+      flex-direction: column
+      align-items: center
+
+    &__col-1
+      width: 60%
+      margin: 5% 0 10%
+    &__col-2
+      width: 80%
+      min-width: 300px
 
 @media screen and ( max-width: 576px )
   .club-choise
@@ -69,9 +88,8 @@
 
   .club
     width: 95%
-
-  .branch
-    background-position: left 5% top 30%, right 5% top 30%
+    &-branch
+      background-position: left 5% top 30%, right 5% top 30%
   
   .visit
     &::before
@@ -79,6 +97,7 @@
 
   .input
     flex-basis: 100%
+
 
   .swiper-container-horizontal>.swiper-pagination-bullets
     bottom: 5%
