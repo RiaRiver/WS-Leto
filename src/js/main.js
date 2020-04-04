@@ -154,4 +154,38 @@ $(document).ready(function () {
       }
     })
   })
+
+  // Плавная прокрутка
+  $('nav').on('click', 'a', function (event) {
+    var id = $(this).attr('href')
+
+    if (id === '#') {
+      return
+    }
+
+    event.preventDefault()
+    var top = $(id).offset().top
+
+    $('body,html').animate({ scrollTop: top }, 1500)
+  })
+
+  // Кнопка скролл вверх
+  $('body').append('<button class="scroll-up"></button>')
+
+  const scrollUp = $('.scroll-up')
+
+  $(document).scroll(function () {
+    var windowHeight = $(window).height()
+    if ($(this).scrollTop() > (windowHeight * 1.5)) {
+      scrollUp.fadeIn()
+    } else {
+      scrollUp.fadeOut()
+    }
+  })
+
+  scrollUp.click(function () {
+    $('html, body').animate({
+      scrollTop: 0
+    }, 1500)
+  })
 })
