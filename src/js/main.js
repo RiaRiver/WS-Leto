@@ -1,3 +1,4 @@
+/* eslint-disable handle-callback-err */
 $(document).ready(function () {
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
@@ -62,8 +63,10 @@ $(document).ready(function () {
   })
 
   // Popup с формой
+  const popup = $('.popup')
   const popupCallback = $('.popup-callback')
   const popupVisit = $('.popup-visit')
+  const popupSend = $('.popup-send')
   const callbackBtn = $('[data-toggle=callback]')
   const visitBtn = $('[data-toggle=visit]')
   const closeBtn = $('.popup__close')
@@ -122,24 +125,21 @@ $(document).ready(function () {
           minlength: 18
         },
         policyCheckbox: { required: true }
-      }
+      },
 
-      // submitHandler: function (form) {
-      //   $.ajax({
-      //     type: 'POST',
-      //     url: 'send.php',
-      //     data: $(form).serialize(),
-      //     success: function (response) {
-      //       var currentForm = $(form)
-      //       // console.log('Ajax сработал. Ответ сервера: ' + response)
-      //       currentForm[0].reset()
-      //       // console.log(currentForm)
-      //       modal.removeClass('modal--visible')
-      //       send.addClass('send--visible')
-      //     // currentForm.parent().load('send_form.html')
-      //     }
-      //   })
-      // }
+      submitHandler: function (form) {
+        $.ajax({
+          type: 'POST',
+          url: 'send.php',
+          data: $(form).serialize(),
+          success: function (response) {
+            var currentForm = $(form)
+            currentForm[0].reset()
+            popup.removeClass('popup--visible')
+            switchPopup(popupSend)
+          }
+        })
+      }
     })
   })
 })

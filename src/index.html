@@ -165,10 +165,10 @@
           <input type="hidden" name="formName" value="Visit">
 
           <input type="text" name="userName" class="input form__input visit__input"
-            id="visit-user-name" placeholder="Ваше имя...">
+            id="visit-user-name" placeholder="Ваше имя..." autocomplete="off">
 
           <input type="tel" name="userPhone" class="input form__input visit__input"
-            id="visit-user-phone" placeholder="Ваш номер телефона...">
+            id="visit-user-phone" placeholder="Ваш номер телефона..." autocomplete="off">
 
           <div class="policy visit__policy">
             <input type="checkbox" name="policyCheckbox" id="visit-policy-checkbox"
@@ -391,10 +391,10 @@
               <!-- /.cards__clubs -->
 
               <input type="text" name="userName" class="input form__input cards__input"
-                id="cards-user-name" placeholder="Ваше имя*">
+                id="cards-user-name" placeholder="Ваше имя*" autocomplete="off">
 
               <input type="tel" name="userPhone" class="input form__input cards__input"
-                id="cards-user-phone" placeholder="Ваш номер телефона*">
+                id="cards-user-phone" placeholder="Ваш номер телефона*" autocomplete="off">
 
               <div class="policy cards-policy">
                 <input type="checkbox" name="policyCheckbox" id="cards-policy-checkbox"
@@ -519,10 +519,10 @@
         <input type="hidden" name="formName" value="Callback">
 
         <input type="text" name="userName" class="input form__input popup__input"
-          id="popup-callback-user-name" placeholder="Ваше имя...">
+          id="popup-callback-user-name" placeholder="Ваше имя..." autocomplete="off">
 
         <input type="tel" name="userPhone" class="input form__input popup__input"
-          id="popup-callback-user-phone" placeholder="Ваш номер телефона...">
+          id="popup-callback-user-phone" placeholder="Ваш номер телефона..." autocomplete="off">
 
         <div class="policy popup__policy">
           <input type="checkbox" name="policyCheckbox" id="popup-callback-policy-checkbox"
@@ -550,10 +550,10 @@
         <input type="hidden" name="formName" value="Visit">
 
         <input type="text" name="userName" class="input form__input popup__input"
-          id="popup-visit-user-name" placeholder="Ваше имя...">
+          id="popup-visit-user-name" placeholder="Ваше имя..." autocomplete="off">
 
         <input type="tel" name="userPhone" class="input form__input popup__input"
-          id="popup-visit-user-phone" placeholder="Ваш номер телефона...">
+          id="popup-visit-user-phone" placeholder="Ваш номер телефона..." autocomplete="off">
 
         <div class="policy popup__policy">
           <input type="checkbox" name="policyCheckbox" id="popup-visit-policy-checkbox"
@@ -567,6 +567,15 @@
         <button class="button form__button button--primary popup__button">Pаписаться</button>
       </form>
       <!-- /.form popup__form -->
+    </div>
+    <!-- /.popup__dialog -->
+  </div>
+  <!-- /.popup -->
+
+  <div class="popup popup-send">
+    <div class="popup__dialog popup-send__dialog">
+      <button class="popup__close"></button>
+      <h2 class="popup__heading popup-send__heading">Форма отправлена.<br>Мы свяжемся с вами через 10&nbsp;минут</h2>
     </div>
     <!-- /.popup__dialog -->
   </div>
