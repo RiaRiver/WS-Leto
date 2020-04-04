@@ -87,9 +87,6 @@
       min-width: 300px
 
   .footer
-    &-menu
-    &__contact
-      margin: 0 0 0
     &-nav
       width: 95%
 
@@ -144,3 +141,14 @@
   .copyright
     width: 53%
     text-align: center
+
+@media screen and ( max-width: 375px ), screen and ( max-height: 375px )
+  .popup__close,
+  .popup-send__close
+    top: 5px
+    right: 5px
+    &::before,
+    &::after
+      background-color: #1e1c34
+  .popup-send__close
+    top: 15px

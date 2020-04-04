@@ -89,6 +89,7 @@ $(document).ready(function () {
   closeBtn.on('click', function () {
     closePopup(popupCallback)
     closePopup(popupVisit)
+    closePopup(popupSend)
   })
 
   $(document).keydown(function (e) {
@@ -97,6 +98,7 @@ $(document).ready(function () {
     if ((key === 'Escape' || key === 'Esc' || key === 27)) {
       closePopup(popupCallback)
       closePopup(popupVisit)
+      closePopup(popupSend)
     }
   })
 
@@ -135,8 +137,18 @@ $(document).ready(function () {
           success: function (response) {
             var currentForm = $(form)
             currentForm[0].reset()
+            console.log(currentForm)
             popup.removeClass('popup--visible')
             switchPopup(popupSend)
+            if (currentForm.hasClass('visit-form')) {
+              ym(61633705, 'reachGoal', 'goal_visit'); return true
+            }
+            if (currentForm.hasClass('callback-form')) {
+              ym(61633705, 'reachGoal', 'goal_callback'); return true
+            }
+            if (currentForm.hasClass('card-form')) {
+              ym(61633705, 'reachGoal', 'goal_card'); return true
+            }
           }
         })
       }

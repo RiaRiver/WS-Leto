@@ -10,6 +10,31 @@
 </head>
 
 <body>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function (m, e, t, r, i, k, a) {
+      m[i] = m[i] || function () {
+        (m[i].a = m[i].a || []).push(arguments)
+      };
+      m[i].l = 1 * new Date();
+      k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a
+        .parentNode.insertBefore(k, a)
+    })
+    (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+
+    ym(61633705, "init", {
+      clickmap: true,
+      trackLinks: true,
+      accurateTrackBounce: true,
+      webvisor: true
+    });
+  </script>
+  <noscript>
+    <div><img src="https://mc.yandex.ru/watch/61633705" style="position:absolute; left:-9999px;"
+        alt="" /></div>
+  </noscript>
+  <!-- /Yandex.Metrika counter -->
+
   <header class="header">
     <div class="container">
       <div class="menu">
@@ -574,8 +599,9 @@
 
   <div class="popup popup-send">
     <div class="popup__dialog popup-send__dialog">
-      <button class="popup__close"></button>
-      <h2 class="popup__heading popup-send__heading">Форма отправлена.<br>Мы свяжемся с вами через 10&nbsp;минут</h2>
+      <button class="popup__close popup-send__close"></button>
+      <h2 class="popup__heading popup-send__heading">Форма отправлена.<br>Мы свяжемся с вами через
+        10&nbsp;минут</h2>
     </div>
     <!-- /.popup__dialog -->
   </div>
