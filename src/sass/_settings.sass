@@ -4,6 +4,13 @@
 *:focus
   outline-color: $primary
 
+input, 
+button,
+.swiper-button
+  &:focus
+    outline: none
+    box-shadow: 0px 0px 0px 1px $primary
+
 html
   font-size: $basic-fz
   // overflow-x: hidden
@@ -13,7 +20,7 @@ body
   font-size: 1rem
   font-weight: normal
 
-img
+img 
   max-width: 100%
 
 .contact
@@ -75,3 +82,14 @@ img
     border-radius: 5px
     &-active
       background-color: $primary
+
+// Классы валидатора
+div.invalid
+  display: none
+input.invalid
+  border: 2px solid tomato
+.policy__checkbox.invalid ~
+  .policy__label
+    &::before
+      border: 2px solid tomato
+

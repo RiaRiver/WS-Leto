@@ -1,0 +1,72 @@
+.popup
+  opacity: 0 
+  visibility: hidden
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  z-index: 100
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 100%
+  height: 100%
+  background-color: rgba($dark, 0.4)
+  &--visible
+    opacity: 1
+    visibility: visible
+
+  &__dialog
+    position: relative
+    width: 95%
+    max-width: 340px
+    padding: 0 0 0
+    background-color: #1e1c34
+  &__close
+    position: absolute
+    top: -20px
+    right: -20px
+    width: 20px
+    height: 20px
+    border: none
+    cursor: pointer
+    background-color: transparent
+    &::before,
+    &::after
+      content: ''
+      width: 100%
+      height: 2px
+      border-radius: 2px
+      position: absolute
+      top: 50%
+      right: 0
+      background-color: #fff
+    &::before
+      transform: rotate(45deg)
+    &::after
+      transform: rotate(-45deg)
+
+  &__form
+    padding-bottom: 28px
+    display: flex
+    flex-direction: column
+    align-items: center
+  &__heading
+    margin: 0px 0 25px
+    color: #2e2e2e
+    background-color: $primary
+    font-size: 21px
+    font-weight: 700
+    text-transform: uppercase
+    text-align: center
+    padding: 16px 0
+  &__input
+    margin: 0 0 15px
+    max-width: 268px
+  &__policy
+    margin-bottom: 17px
+    &-label
+      max-width: 210px
+      line-height: 14px
+      align-items: flex-start

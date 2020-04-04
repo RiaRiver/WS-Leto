@@ -28,6 +28,7 @@ $(document).ready(function () {
     }
   })
 
+  // Services Slider Resize
   $(window).resize(function () {
     $('.services-swiper').parent().width(swiperWidth())
   })
@@ -46,6 +47,7 @@ $(document).ready(function () {
     return servicesSwiperWidth
   }
 
+  // Gallery Slider
   var gallerySwiper = new Swiper('.gallery-swiper', {
     loop: true,
 
@@ -57,5 +59,87 @@ $(document).ready(function () {
       el: '.gallery-pagination',
       clickable: true
     }
+  })
+
+  // Popup с формой
+  const popupCallback = $('.popup-callback')
+  const popupVisit = $('.popup-visit')
+  const callbackBtn = $('[data-toggle=callback]')
+  const visitBtn = $('[data-toggle=visit]')
+  const closeBtn = $('.popup__close')
+
+  function switchPopup (popup) {
+    popup.toggleClass('popup--visible')
+  }
+
+  function isPopup (popup) {
+    return popup.hasClass('popup--visible')
+  }
+
+  function closePopup (popup) {
+    if (isPopup(popup)) switchPopup(popup)
+  }
+
+  callbackBtn.on('click', function () { switchPopup(popupCallback) })
+  visitBtn.on('click', function () { switchPopup(popupVisit) })
+
+  closeBtn.on('click', function () {
+    closePopup(popupCallback)
+    closePopup(popupVisit)
+  })
+
+  $(document).keydown(function (e) {
+    var key = e.key || e.keyCode
+
+    if ((key === 'Escape' || key === 'Esc' || key === 27)) {
+      closePopup(popupCallback)
+      closePopup(popupVisit)
+    }
+  })
+
+  $('.popup').click(function (e) { if ($(e.target).hasClass('popup')) { $(e.target).removeClass('popup--visible') } })
+
+  // Конец Popup с формой
+
+  // Маски полей
+  $('[type=tel]').mask('+7 (000) 000-00-00')
+
+  // Валидация формы
+
+  $('form').each(function () {
+    $(this).validate({
+      errorElement: 'div',
+      errorClass: 'invalid',
+      errorPlacement: function (error, element) {
+        return true
+      },
+      rules: {
+        userName: {
+          required: true
+        },
+        userPhone: {
+          required: true,
+          minlength: 18
+        },
+        policyCheckbox: { required: true }
+      }
+
+      // submitHandler: function (form) {
+      //   $.ajax({
+      //     type: 'POST',
+      //     url: 'send.php',
+      //     data: $(form).serialize(),
+      //     success: function (response) {
+      //       var currentForm = $(form)
+      //       // console.log('Ajax сработал. Ответ сервера: ' + response)
+      //       currentForm[0].reset()
+      //       // console.log(currentForm)
+      //       modal.removeClass('modal--visible')
+      //       send.addClass('send--visible')
+      //     // currentForm.parent().load('send_form.html')
+      //     }
+      //   })
+      // }
+    })
   })
 })
