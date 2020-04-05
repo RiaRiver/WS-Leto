@@ -1,5 +1,5 @@
 .cards
-  padding: rem(26px) 0 rem(66px)
+  padding: rem(60px) 0 rem(66px)
   &__col-1
     display: flex
     justify-content: center
@@ -39,6 +39,7 @@
     text-align: center
     font-size: rem(12px)
     text-transform: uppercase
+    opacity: 0.6
   &__input
     border: 1px solid #b7b7b7
     width: 100%
@@ -48,7 +49,7 @@
     &::placeholder
       color: #94939a
   &__clubs
-    margin-bottom: 4px
+    margin-bottom: 7px
   &__club
     display: flex
 
@@ -68,6 +69,7 @@
       font-size: rem(16px)
       margin-bottom: 3px
   &-policy
+    margin-top: 3px
     align-self: flex-start
     padding-left: 20px
     margin-bottom: 18px
@@ -91,6 +93,7 @@ input[name=period]:checked + label
     border: none
     background-color: #ffd11a
     transition: 0.3s
+    opacity: 1
 
 input[name=club]:checked + label  
     &::before

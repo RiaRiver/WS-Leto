@@ -86,7 +86,7 @@ function buildImg (done) {
     }))
     .pipe(dest('dist/img/'))
 
-  src('src/img/**/*.svg')
+  src('src/img/**/*.{svg,ico}')
     .pipe(dest('dist/img/'))
   done()
 }

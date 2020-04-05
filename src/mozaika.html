@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Фитнес клуб "Лето"</title>
+  <title>"Лето" Мозаика</title>
   <link href="img/favicon.ico" rel="icon" type="image/x-icon">
   <link rel="stylesheet" href="css/swiper.min.css">
   <link rel="stylesheet" href="css/style.css">
@@ -141,79 +141,244 @@
     </section>
     <!-- /.section promo -->
 
-    <section class="section clubs" id="clubs">
+    <div class="breadcrumbs">
+      <div class="container breadcrumbs__container">
+        <a href="index.html" class="breadcrumbs__link">Главная</a>
+        <span class="breadcrumbs__separator"></span>
+        <a href="index.html/#clubs" class="breadcrumbs__link">Клубы</a>
+        <span class="breadcrumbs__separator"></span>
+        <span class="breadcrumbs__current">Лето «Мозаика»</span>
+      </div>
+      <!-- /.container -->
+    </div>
+    <!-- /.breadcrumbs -->
+
+    <section class="section clubs clubs--branch" id="clubs">
       <div class="container">
-        <h2 class="section__heading">Выберите свой клуб</h2>
-        <div class="row clubs__row">
-          <a href="#" class="club">
+
+        <div class="row clubs__row clubs__row--branch">
+          <div class="club">
             <div class="club__wrapper">
               <img src="img/clubs/club-1.png" alt="Мозаика" class="club__image">
               <h3 class="club__title"><span>Лето Мозаика</span></h3>
             </div>
             <!-- /.club__wrapper -->
-            <div class="branch club-branch">
-              <strong class="branch__title club-branch__title">«Лето» в ТРЦ «Мозаика»
-              </strong>
-              <span class="branch__address club-branch__address">Россия, Москва, 7-я Кожуховская
-                ул., 9</span>
-            </div>
-            <!-- /.branch -->
-          </a>
+          </div>
           <!-- /.club -->
 
-          <a href="#" class="club">
-            <div class="club__wrapper">
-              <img src="img/clubs/club-2.png" alt="Щелково" class="club__image">
-              <h3 class="club__title"><span>Лето Щелково</span></h3>
+          <div class="club-info">
+            <div class="club-info__item">
+              <img src="img/location.svg" alt="info icon" class="club-info__icon">
+              <div class="club-info__text">
+                <strong class="club-info__heading">«Лето» в ТРЦ «Мозаика»</strong>
+                <span class="club-info__info">Россия, Москва, 7-я Кожуховская ул., 9</span>
+              </div>
             </div>
-            <!-- /.club__wrapper -->
-            <div class="branch club-branch">
-              <strong class="branch__title club-branch__title">«Лето» в БЦ Спиртзавод
-              </strong>
-              <span class="branch__address club-branch__address">Россия, г. Щелково, ул. Советская,
-                д. 16</span>
+            <div class="club-info__item">
+              <img src="img/clock.svg" alt="info icon" class="club-info__icon">
+              <div class="club-info__text">
+                <strong class="club-info__heading">Часы работы:</strong>
+                <span class="club-info__info">ПН-ВС: круглосуточно</span>
+              </div>
             </div>
-            <!-- /.branch -->
-          </a>
-          <!-- /.club -->
+            <div class="club-info__item">
+              <img src="img/phone.png" alt="info icon" class="club-info__icon">
+              <div class="club-info__text">
+                <strong class="club-info__heading">Единый телефон:</strong>
+                <a href="tel:+74952660248" class="club-info__info">+ 7 (495) 266-02-48</a>
+              </div>
+            </div>
+            <div class="club-info__item">
+              <img src="img/mail.png" alt="info icon" class="club-info__icon">
+              <div class="club-info__text">
+                <strong class="club-info__heading">E-mail</strong>
+                <a href="mailto:sell@letofit.ru" class="club-info__info">sell@letofit.ru</a>
+              </div>
+            </div>
+            <a href="#" class="club-info__shedule button button--primary">Расписание клуба</a>
+
+          </div>
+          <!-- /.club-info -->
         </div>
         <!-- /.row clubs__row -->
+
+        <div class="row club-advantages">
+          <div class="club-advantages__item">
+            <img src="img/advantages/area.png" alt="advantage icon" class="club-advantages__icon">
+
+            <span class="club-advantages__title">Общая площадь 1500 м<sup>2</sup></span>
+          </div>
+          <div class="club-advantages__item">
+            <img src="img/advantages/muscul.png" alt="advantage icon" class="club-advantages__icon">
+
+            <span class="club-advantages__title">Тренажерный зал 1000 м<sup>2</sup></span>
+          </div>
+          <div class="club-advantages__item">
+            <img src="img/advantages/group.png" alt="advantage icon" class="club-advantages__icon">
+
+            <span class="club-advantages__title">Груп. программы
+              (2 зала)</span>
+          </div>
+          <div class="club-advantages__item">
+            <img src="img/advantages/spa.png" alt="advantage icon" class="club-advantages__icon">
+
+            <span class="club-advantages__title">СПА Зона</span>
+          </div>
+          <div class="club-advantages__item">
+            <img src="img/advantages/crossfit.png" alt="advantage icon" class="club-advantages__icon">
+
+            <span class="club-advantages__title">Кроссфит</span>
+          </div>
+          <div class="club-advantages__item">
+            <img src="img/advantages/bar.png" alt="advantage icon" class="club-advantages__icon">
+
+            <span class="club-advantages__title">Фитнес бар</span>
+          </div>
+          <div class="club-advantages__item">
+            <img src="img/advantages/massage.png" alt="advantage icon" class="club-advantages__icon">
+
+            <span class="club-advantages__title">Массажный кабинет</span>
+          </div>
+
+
+        </div>
+        <!-- /.row club-advantages -->
       </div>
       <!-- /.container -->
     </section>
     <!-- /.section clubs -->
 
-    <section class="section visit">
+    <section class="section cards cards--branch" id="cards">
       <div class="container">
-        <h2 class="section__heading section__heading--light">Записаться на бесплатный визит</h2>
-
-        <form action="send.php" method="POST" class="form visit__form visit-form">
-
-          <input type="hidden" name="formName" value="Visit">
-
-          <input type="text" name="userName" class="input form__input visit__input"
-            id="visit-user-name" placeholder="Ваше имя..." autocomplete="off">
-
-          <input type="tel" name="userPhone" class="input form__input visit__input"
-            id="visit-user-phone" placeholder="Ваш номер телефона..." autocomplete="off">
-
-          <div class="policy visit__policy">
-            <input type="checkbox" name="policyCheckbox" id="visit-policy-checkbox"
-              class="policy__checkbox" checked>
-            <label for="visit-policy-checkbox" class="policy__label">Я согласен на обработку
-              персональных данных</label>
+        <h3 class="section__heading">Выбрать карту</h3>
+        <div class="row cards__row">
+          <div class="col-31 cards__col-1 cards__col-1--branch">
+            <div class="cards-image cards-image--branch">
+              <img src="img/cards.png" alt="cards">
+            </div>
+            <!-- /.cards-image -->
           </div>
-          <!-- /.policy -->
+          <!-- /.col-31 cards__col-1 -->
 
-          <button class="button form__button button--primary visit__button">Записаться</button>
-        </form>
-        <!-- /.form visit__form -->
+          <div class="col-65 cards__col-2">
+            <form action="send.php" method="POST" class="form cards__form card-form">
+              <input type="hidden" name="formName" value="Card">
+              <input type="hidden" name="club" value="Mozaika">
+
+              <div class="cards__periods cards__periods--branch">
+                <input type="radio" id="period1" name="period" value="1_month_solo">
+                <label for="period1" class="cards__period cards__period--branch">
+                  <span class="cards__period-word">1 месяц</span>
+                  <span class="cards__period-word cards__period-word--lines">соло</span>
+                  <span class="cards__period-word cards__period-word--biger">2999 &#8381;</span>
+                  <span class="cards__period-word cards__period-word--lowercase">* Без
+                    заморозки</span>
+                </label>
+
+                <input type="radio" id="period2" name="period" value="6_month_solo">
+                <label for="period2" class="cards__period cards__period--branch">
+                  <span class="cards__period-word">6 месяцев</span>
+                  <span class="cards__period-word cards__period-word--lines">соло</span>
+                  <span class="cards__period-word cards__period-word--biger">9900 &#8381;</span>
+                  <span class="cards__period-word cards__period-word--lowercase">* Без
+                    заморозки</span>
+                </label>
+
+                <input type="radio" id="period3" name="period" value="6_month_solo">
+                <label for="period3" class="cards__period cards__period--branch">
+                  <span class="cards__period-word">9 месяцев</span>
+                  <span class="cards__period-word cards__period-word--lines">соло</span>
+                  <span class="cards__period-word cards__period-word--biger">11900 &#8381;</span>
+                  <span class="cards__period-word cards__period-word--lowercase">* Без
+                    заморозки</span>
+                </label>
+
+                <input type="radio" id="period4" name="period" value="6_month_solo">
+                <label for="period4" class="cards__period cards__period--branch">
+                  <span class="cards__period-word">12 месяцев</span>
+                  <span class="cards__period-word cards__period-word--lines">Дневная</span>
+                  <span class="cards__period-word cards__period-word--biger">9900 &#8381;</span>
+                  <span class="cards__period-word cards__period-word--lowercase">* 1 месяц
+                    заморозки</span>
+                </label>
+
+                <input type="radio" id="period5" name="period" value="6_month_solo">
+                <label for="period5" class="cards__period cards__period--branch">
+                  <span class="cards__period-word">12 месяцев</span>
+                  <span class="cards__period-word cards__period-word--lines">Соло</span>
+                  <span class="cards__period-word cards__period-word--biger">15900 &#8381;</span>
+                  <span class="cards__period-word cards__period-word--lowercase">* 1 месяц
+                    заморозки</span>
+                </label>
+              </div>
+              <!-- /.cards__periods -->
+
+              <input type="text" name="userName" class="input form__input cards__input"
+                id="cards-user-name" placeholder="Ваше имя*" autocomplete="off">
+
+              <input type="tel" name="userPhone" class="input form__input cards__input"
+                id="cards-user-phone" placeholder="Ваш номер телефона*" autocomplete="off">
+
+              <div class="form-group">
+                <div class="policy cards-policy cards-policy--branch">
+                  <input type="checkbox" name="policyCheckbox" id="cards-policy-checkbox"
+                    class="policy__checkbox" checked>
+                  <label for="cards-policy-checkbox"
+                    class="policy__label cards-policy__label policy__label--branch">Я
+                    согласен на обработку
+                    персональных данных</label>
+                </div>
+                <button
+                  class="button form__button button--primary cards__button cards__button--branch">Забронировать
+                  карту</button>
+              </div>
+            </form>
+          </div>
+          <!-- /.col-65 cards__col-2 -->
+        </div>
+        <!-- /.row cards__row -->
       </div>
       <!-- /.container -->
     </section>
-    <!-- /.section visit -->
+    <!-- /.section cards -->
 
-    <section class="section services" id="services">
+
+    <section class="section gallery" id="gallery">
+      <h3 class="section__heading">Фотогалерея</h3>
+      <div class="gallery-bg">
+        <div class="container gallery__container">
+          <!-- <div class="gallery-swiper-cover"> -->
+          <div class="swiper-container gallery-swiper swiper-no-swiping">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide gallery-slide">
+                <img src="img/gallery/gallery-1.png" alt="gallery slide" class="gallery-slide__image">
+              </div>
+              <!-- /.swiper-slide gallery-slide -->
+
+              <div class="swiper-slide gallery-slide">
+                <img src="img/gallery/gallery-1.png" alt="gallery slide" class="gallery-slide__image">
+              </div>
+              <!-- /.swiper-slide gallery-slide -->
+            </div>
+            <!-- /.swiper-wrapper -->
+            <!-- Add Pagination -->
+            <div class="swiper-pagination gallery-pagination"></div>
+          </div>
+          <!-- /.swiper-container gallery-swiper -->
+
+          <!-- Add Arrows -->
+          <div class="gallery-button-next swiper-button swiper__button-next"></div>
+          <div class="gallery-button-prev swiper-button swiper__button-prev"></div>
+          <!-- </div> -->
+          <!-- /.gallery-swiper-cover -->
+        </div>
+        <!-- /.container gallery__container -->
+      </div>
+      <!-- /.gallery-bg -->
+    </section>
+    <!-- /.section gallery -->
+
+    <section class="section services services--branch" id="services">
       <h2 class="section__heading">Услуги наших клубов</h2>
 
       <div class="container services__container">
@@ -330,117 +495,39 @@
     </section>
     <!-- /.section services -->
 
-    <section class="section gallery" id="gallery">
-      <h3 class="section__heading">Фотогалерея</h3>
-      <div class="gallery-bg">
-        <div class="container gallery__container">
-          <!-- <div class="gallery-swiper-cover"> -->
-          <div class="swiper-container gallery-swiper swiper-no-swiping">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide gallery-slide">
-                <img src="img/gallery/gallery-1.png" alt="gallery slide" class="gallery-slide__image">
-              </div>
-              <!-- /.swiper-slide gallery-slide -->
-
-              <div class="swiper-slide gallery-slide">
-                <img src="img/gallery/gallery-1.png" alt="gallery slide" class="gallery-slide__image">
-              </div>
-              <!-- /.swiper-slide gallery-slide -->
-            </div>
-            <!-- /.swiper-wrapper -->
-            <!-- Add Pagination -->
-            <div class="swiper-pagination gallery-pagination"></div>
-          </div>
-          <!-- /.swiper-container gallery-swiper -->
-
-          <!-- Add Arrows -->
-          <div class="gallery-button-next swiper-button swiper__button-next"></div>
-          <div class="gallery-button-prev swiper-button swiper__button-prev"></div>
-          <!-- </div> -->
-          <!-- /.gallery-swiper-cover -->
-        </div>
-        <!-- /.container gallery__container -->
-      </div>
-      <!-- /.gallery-bg -->
-    </section>
-    <!-- /.section gallery -->
-
-    <section class="section cards" id="cards">
+    <section class="section visit">
       <div class="container">
-        <h3 class="section__heading">Клубные карты</h3>
-        <div class="row cards__row">
-          <div class="col-48 cards__col-1">
-            <div class="cards-image">
-              <img src="img/cards.png" alt="cards" class="cards-image__pre">
-              <img src="img/cards.png" alt="cards">
-              <img src="img/cards.png" alt="cards" class="cards-image__post">
-            </div>
-            <!-- /.cards-image -->
+        <h2 class="section__heading section__heading--light">Записаться на бесплатный визит</h2>
+
+        <form action="send.php" method="POST" class="form visit__form visit-form">
+
+          <input type="hidden" name="formName" value="Visit">
+
+          <input type="text" name="userName" class="input form__input visit__input"
+            id="visit-user-name" placeholder="Ваше имя..." autocomplete="off">
+
+          <input type="tel" name="userPhone" class="input form__input visit__input"
+            id="visit-user-phone" placeholder="Ваш номер телефона..." autocomplete="off">
+
+          <div class="policy visit__policy">
+            <input type="checkbox" name="policyCheckbox" id="visit-policy-checkbox"
+              class="policy__checkbox" checked>
+            <label for="visit-policy-checkbox" class="policy__label">Я согласен на обработку
+              персональных данных</label>
           </div>
-          <!-- /.col-48 cards__col-1 -->
+          <!-- /.policy -->
 
-          <div class="col-43 cards__col-2">
-            <form action="send.php" method="POST" class="form cards__form card-form">
-              <input type="hidden" name="formName" value="Card">
-
-              <div class="cards__periods">
-                <input type="radio" id="period1" name="period" value="1_month">
-                <label for="period1" class="cards__period">1 месяц</label>
-                <input type="radio" id="period2" name="period" value="6_months">
-                <label for="period2" class="cards__period">6 месяцев</label>
-                <input type="radio" id="period3" name="period" value="9_months">
-                <label for="period3" class="cards__period">9 месяцев</label>
-                <input type="radio" id="period4" name="period" value="12_months" checked>
-                <label for="period4" class="cards__period">12 месяцев</label>
-              </div>
-              <!-- /.cards__periods -->
-
-              <div class="cards__clubs">
-                <input type="radio" id="club1" name="club" value="Mozaika" checked>
-                <label for="club1" class="cards__club">
-                  <span class="branch cards-branch">
-                    <strong class="branch__title cards-branch__title">Лето «Мозаика»</strong>
-                    <span class="branch__address cards-branch__address">Россия, Москва, 7-я
-                      Кожуховская ул., 9</span>
-                  </span>
-                  <!-- /.branch -->
-                </label>
-                <input type="radio" id="club2" name="club" value="Schelkovo">
-                <label for="club2" class="cards__club">
-                  <span class="branch cards-branch">
-                    <strong class="branch__title cards-branch__title">Лето «Щелково»</strong>
-                    <span class="branch__address cards-branch__address">Россия, г. Щелково, ул.
-                      Советская, д. 16</span>
-                  </span>
-                  <!-- /.branch -->
-                </label>
-              </div>
-              <!-- /.cards__clubs -->
-
-              <input type="text" name="userName" class="input form__input cards__input"
-                id="cards-user-name" placeholder="Ваше имя*" autocomplete="off">
-
-              <input type="tel" name="userPhone" class="input form__input cards__input"
-                id="cards-user-phone" placeholder="Ваш номер телефона*" autocomplete="off">
-
-              <div class="policy cards-policy">
-                <input type="checkbox" name="policyCheckbox" id="cards-policy-checkbox"
-                  class="policy__checkbox" checked>
-                <label for="cards-policy-checkbox" class="policy__label cards-policy__label">Я
-                  согласен на обработку
-                  персональных данных</label>
-              </div>
-              <button class="button form__button button--primary cards__button">Забронировать
-                карту</button>
-            </form>
-          </div>
-          <!-- /.col-43 cards__col-2 -->
-        </div>
-        <!-- /.row cards__row -->
+          <button class="button form__button button--primary visit__button">Записаться</button>
+        </form>
+        <!-- /.form visit__form -->
       </div>
       <!-- /.container -->
     </section>
-    <!-- /.section cards -->
+    <!-- /.section visit -->
+
+    <div class="section map" id="map">
+    </div>
+    <!-- /.map -->
   </main>
 
   <footer class="footer">
@@ -513,6 +600,7 @@
       <div class="footer__info">
         <span class="copyright">© Фитнес-центр «Лето», 2017. Все права защищены.</span>
 
+        
         <div class="social">
           <a href="https://vk.com/" class="social__link" target="_blank">
             <img src="img/social/vk.svg" alt="vk">

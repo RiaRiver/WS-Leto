@@ -188,4 +188,45 @@ $(document).ready(function () {
       scrollTop: 0
     }, 1500)
   })
+
+  // Карта
+  function init () {
+    var myMap = new ymaps.Map('map', {
+      center: [55.709961, 37.673855],
+      zoom: 17
+    }, {
+      searchControlProvider: 'yandex#search'
+    })
+
+    var myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+      hintContent: 'Лето Мозаика',
+      balloonContent: 'Торговый центр Мозаика'
+    })
+    myMap.behaviors.disable('scrollZoom')
+
+    myMap.geoObjects
+      .add(myPlacemark)
+  }
+
+  function initYaMap (cnt) {
+    if (cnt >= 60) return
+    if (typeof ymaps !== 'undefined') {
+      ymaps.ready(init)
+    } else {
+      setTimeout(function () {
+        initYaMap(cnt + 1)
+      }, 1000)
+    }
+  }
+
+  let yaMapInit = false
+  const teamTop = $('#gallery').offset().top
+
+  $(window).scroll(function () {
+    if ($(window).scrollTop() > teamTop && (!yaMapInit)) {
+      $('body').append('<script src="https://api-maps.yandex.ru/2.1/?apikey=0270f6eb-6b95-4e8d-814c-d0ac51ccb2f9&lang=ru_RU"></script>')
+      yaMapInit = true
+      initYaMap(1)
+    }
+  })
 })
