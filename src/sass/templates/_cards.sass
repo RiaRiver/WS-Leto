@@ -11,15 +11,15 @@
     &__post
       position: absolute
       z-index: -1
-      filter: blur(5px)
       width: 100%
+      filter: blur(5px)
     &__pre
       top: 0
       left: 0
       transform: translate(-20%, -20%)
     &__post
-      bottom: 0
       right: 0
+      bottom: 0
       transform: translate(20%, 20%)
     
   &__form
@@ -27,26 +27,26 @@
   &__periods
     display: flex
     justify-content: space-between
-    margin-bottom: 24px
     flex-wrap: wrap
+    margin-bottom: 24px
   &__period
-    border: 1px solid #b7b7b7
-    background-color: #ffffff
-    padding: 15px 10px
-    border-radius: 30px
-    min-width: rem(120px)
     width: 24%
-    text-align: center
+    min-width: rem(120px)
+    padding: 15px 10px
     font-size: rem(12px)
     text-transform: uppercase
-    opacity: 0.6
-    cursor: pointer
-  &__input
+    text-align: center
+    background-color: $light
     border: 1px solid #b7b7b7
+    border-radius: 30px
+    cursor: pointer
+    opacity: 0.6
+  &__input
     width: 100%
-    font-size: 14px
-    margin-bottom: 12px
     margin-right: 0px
+    margin-bottom: 12px
+    font-size: 14px
+    border: 1px solid #b7b7b7
     &::placeholder
       color: #94939a
   &__clubs
@@ -59,32 +59,32 @@
       width: 21px
       height: 21px
       margin-right: 11px
+      background-color: $light
       border: 1px solid rgba(0, 0, 0, 0.4)
       border-radius: 4px
       cursor: pointer
-      background-color: white
   &-branch
     margin-bottom: 20px
     &__title,
     &__address
-      font-size: rem(16px)
       margin-bottom: 3px
+      font-size: rem(16px)
   &-policy
-    margin-top: 3px
     align-self: flex-start
-    padding-left: 20px
+    margin-top: 3px
     margin-bottom: 18px
+    padding-left: 20px
     &__label
-      color: #94939a
       font-weight: 300
+      color: #94939a
       &::before
         min-width: 21px
         height: 21px
-        border-radius: 4px
         margin-right: 11px
+        border-radius: 4px
   &__button
-    min-width: 190px
     align-self: flex-end
+    min-width: 190px
         
 
 input[type=radio]
@@ -92,10 +92,10 @@ input[type=radio]
 
 input[name=period]:checked + label  
     border: none
-    background-color: #ffd11a
+    background-color: $primary
     transition: 0.3s
     opacity: 1
 
 input[name=club]:checked + label  
     &::before
-      background: #ffd11a url('../img/check.svg') no-repeat center
+      background: $primary url('../img/check.svg') no-repeat center

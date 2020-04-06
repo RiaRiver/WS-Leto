@@ -5,14 +5,14 @@
     display: flex
   
   &__link
-    color: #2e2e2e
     font-size: 13px
     font-weight: 500
+    color: $dark
 
   &__current
-    color: #949494
     font-weight: 300
     font-size: 13px
+    color: #949494
 
   &__separator
     width: 18px
@@ -39,48 +39,48 @@
       height: rem(38px)
       margin-right: rem(24px)
     &__text
-      color: #2e2e2e
       font-size: rem(17px)
       font-weight: 300
+      color: $dark
     &__heading
+      display: block
+      margin-bottom: 4px
       font-size: rem(18px)
       font-weight: 500
-      margin-bottom: 4px
-      display: block
     &__info
       display: block
-      color: #2e2e2e
+      color: $dark
     &__shedule
       display: inline-block
-      margin-top: 5px
       min-width: 188px
+      margin-top: 5px
 
   &-advantages
-    margin: 0 -10px
     justify-content: center
+    margin: 0 -10px
     &__item
       display: flex
       flex-direction: column
-      min-height: 156px
-      width: 145px
-      border: 1px solid rgba(39, 25, 48, 0.14)
       align-items: center
-      padding: 20px 12px 0
+      width: 145px
+      min-height: 156px
       margin: 22px 10px 0
+      padding: 20px 12px 0
+      border: 1px solid rgba(39, 25, 48, 0.14)
    
     &__title
-      color: #2e2e2e
       font-size: 14px
       font-weight: 700
       line-height: 17px
       text-align: center
+      color: $dark
       &::before
         content: ''
+        display: block
         width: 101px
         height: 1px
-        background-color: rgba(39, 25, 48, 0.14)
-        display: block
         margin: 17px auto 14px
+        background-color: rgba(39, 25, 48, 0.14)
     &__icon
       height: 53px
 
@@ -94,10 +94,10 @@
     &--branch
       display: flex
       flex-direction: column
+      width: 19%
+      min-width: rem(145px)
       padding: 15px 12px
       border-radius: 3px
-      min-width: rem(145px)
-      width: 19%
 
     &-word
       margin-bottom: 2px
@@ -116,8 +116,8 @@
       width: 100%
   &-policy
     &--branch
-      margin-bottom: 0
       align-self: center
+      margin-bottom: 0
 
 .form
   &-group

@@ -4,10 +4,10 @@
   padding: rem(16px)
   font-size: rem(12px)
   font-weight: bold
+  text-align: center
   text-transform: uppercase
   border-radius: 30px
   cursor: pointer
-  text-align: center
   &--primary
     background-color: $primary
     color: $btn-dark
@@ -25,25 +25,25 @@
 
 .input
   position: relative
-  padding: 0 rem(25px)
-  min-height: 45px
+  flex-basis: 23.5%
   min-width: 268px
-  border-radius: 30px
-  border: none
-  background-color: $light
-  color: #101010
+  min-height: 45px
+  padding: 0 rem(25px)
   font-size: 13px
   font-weight: 300
-  flex-basis: 23.5%
+  border: none
+  border-radius: 30px
+  background-color: $light
+  color: #101010
   &-group
     position: relative
   &-label
     position: absolute
     top: 13px
     left: 25px
-    color: #101010
     font-size: 13px
     font-weight: 300
+    color: #101010
     opacity: 0.7
     span
       color: $primary
@@ -54,32 +54,32 @@
         display: none
 
 .policy
-  flex-basis: 100%
   position: relative
+  flex-basis: 100%
   &__label
     display: flex
-    align-items: center
     justify-content: center
-    color: $light
+    align-items: center
     font-family: Roboto
     font-size: 11px
     font-weight: 400
     line-height: 22.04px
     text-transform: uppercase
+    color: $light
     &::before
       content: ''
       min-width: 18px
       height: 18px
       margin-right: 0.57rem
+      background-color: $light
       border: 1px solid rgba(0, 0, 0, 0.4)
       border-radius: 2px
       cursor: pointer
-      background-color: $light
 
   &__checkbox
+    position: absolute
     visibility: hidden
     opacity: 0
-    position: absolute
     &:checked ~
       .policy__label
         &::before
@@ -89,12 +89,12 @@
   &__button
     &-next,
     &-prev
+      position: absolute
+      top: 0
+      z-index: 1
       width: 36px
       height: 36px
       border-radius: 50%
-      position: absolute
-      z-index: 1
-      top: 0
     &-next
       right: 0
       background: $primary url(../img/button-arrow.svg) no-repeat left 13px center
@@ -104,11 +104,11 @@
       background: $primary url('../img/button-arrow.svg') no-repeat left 13px center
 
 .scroll-up
-  display: none
   position: fixed
-  z-index: 5
   right: 15px
   bottom: 15px
+  z-index: 5
+  display: none
   width: 36px
   height: 36px
   background: $primary url(../img/button-arrow.svg) no-repeat center

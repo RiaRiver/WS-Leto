@@ -4,8 +4,8 @@
     display: flex
     justify-content: space-between
     align-items: flex-start
-    padding: rem(53px) 0 rem(34px)
     flex-wrap: wrap
+    padding: rem(53px) 0 rem(34px)
   &-nav
     display: flex
     justify-content: space-between
@@ -19,28 +19,28 @@
     &__heading
       margin: 0 0 8px
       font-size: 16px
-      color: $primary
       font-weight: 700
+      color: $primary
     &__item
+      margin: 0 0 8px
       text-decoration: none
       color: $light
-      margin: 0 0 8px
   &-contacts
     display: flex
     flex-direction: column
     align-items: flex-end
   &__contact
-    margin-bottom: 15px
     margin-right: 2px
+    margin-bottom: 15px
 
   &-branch
-    color: #ffffff
+    margin-bottom: 22px
     font-family: Roboto
     font-size: 14px
-    margin-bottom: 22px
+    color: $light
     &__title
-      font-size: 14px
       margin-bottom: 4px
+      font-size: 14px
 
   &__club
     display: flex
@@ -49,17 +49,17 @@
       width: 18px
       height: 18px
       margin-right: 11px
+      background-color: $light
       border: 1px solid rgba(0, 0, 0, 0.4)
       border-radius: 4px
       cursor: pointer
-      background-color: white
 
   &-separator
+    display: block
     width: 95%
     max-width: 1265px
-    border-top: 1px solid rgba($light, 0.3)
     margin: 0 auto
-    display: block
+    border-top: 1px solid rgba($light, 0.3)
 
   &__info
     display: flex
@@ -69,23 +69,23 @@
 
 input[name=footer-club]:checked + label  
   &::before
-    background: #ffd11a url('../img/check.svg') no-repeat center
+    background: $primary url('../img/check.svg') no-repeat center
 
 .copyright
-  color: $light
   font-weight: 300
+  color: $light
 
 .social
   display: flex
   &__link
-    width: 40px
-    height: 40px
-    border: 1px solid $light
-    border-radius: 3px
     display: flex
     justify-content: center
     align-items: center
+    width: 40px
+    height: 40px
     margin-right: 8px
+    border: 1px solid $light
+    border-radius: 3px
     &:last-of-type
       margin-right: 0
 

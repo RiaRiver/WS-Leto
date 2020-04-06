@@ -52,11 +52,11 @@
     display: block
     width: 30px
     height: 34px
-    border: 2px solid #ffd11a
-    border-radius: 2px
-    background: linear-gradient(to right, #ffd11a, #ffd11a) no-repeat, linear-gradient(to right, #ffd11a, #ffd11a) no-repeat, linear-gradient(to right, #ffd11a, #ffd11a) no-repeat
+    background: linear-gradient(to right, $primary, $primary) no-repeat, linear-gradient(to right, $primary, $primary) no-repeat, linear-gradient(to right, $primary, $primary) no-repeat
     background-size: 20px 2px
     background-position: top 6px center, top 14px center, bottom 6px center
+    border: 2px solid $primary
+    border-radius: 2px
         
   .header
     &__button 
@@ -67,16 +67,16 @@
       position: absolute
       top: 88px
       right: 0
-      opacity: 1
       z-index: 15
       width: 130px
       border-bottom-left-radius: 20px
+      opacity: 1
       &__container
         flex-direction: column
         align-items: center
       &__item
-        font-size: 12px
         padding: 3px 0
+        font-size: 12px
 
   .promo
     &-slide
@@ -194,7 +194,7 @@
     right: 5px
     &::before,
     &::after
-      background-color: #1e1c34
+      background-color: $btn-dark
   .popup-send__close
     top: 15px
 

@@ -1,5 +1,5 @@
 .header
-  background: linear-gradient(to right, #561a36 0%, #1e1c34 100%)
+  background: linear-gradient(to right, $gradient-start 0%, $btn-dark 100%)
   &__container
     position: static
   &__club-choise
@@ -11,19 +11,19 @@
       box-shadow: none
 
   &-branch
-    color: #1e1c34
-    font-size: 14px
-    margin-bottom: 20px
     display: block
+    margin-bottom: 20px
+    font-size: 14px
+    color: $btn-dark
     &--active
-      color: $light
       margin-bottom: 0
       font-size: 15px
       background: none
+      color: $light
       
     &__title
-      font-size: 14px
       margin-bottom: 4px
+      font-size: 14px
       font-weight: 700
       &--active
         font-size: 15px
@@ -32,8 +32,8 @@
     margin-right: 6%
     padding-left: 45px
     font-size: rem(14px)
-    line-height: rem(18px)
     font-weight: bold
+    line-height: rem(18px)
     text-align: left
     background: transparent url(../img/signup.svg) no-repeat left center
     color: $light
@@ -51,15 +51,15 @@
     &__item
       color: $light
       font-size: rem(14px)
-      line-height: rem(31px)
       font-weight: 400
+      line-height: rem(31px)
       text-transform: uppercase
       text-decoration: none
 .menu
-  padding: rem(20px) 0 
   display: flex
   justify-content: space-between
   align-items: center
+  padding: rem(20px) 0 
 
 .menu-button
   display: none
@@ -78,24 +78,24 @@
       content: ''
       width: 32px
       height: 32px
+      margin-right: 17px
+      background: url(../img/down-arrow.svg) no-repeat center
       border: 1px solid $primary
       border-radius: 50%
-      background: url(../img/down-arrow.svg) no-repeat center
-      margin-right: 17px
 
 .drop-down
-  display: none
-  background-color: $primary
   position: absolute
+  top: 67px
   z-index: 15
+  display: none
   width: 293px
   padding: 29px 0 32px 54px
+  background-color: $primary
   border-radius: 4px
-  top: 67px
 
 .button.active
+  background-color: $primary
+  background: $primary url(../img/down-arrow-active.svg) no-repeat 30px center
+  color: $btn-dark
   border-bottom-left-radius: 0
   border-bottom-right-radius: 0
-  background-color: #ffd11a
-  color: #1e1c34
-  background: #ffd11a url(../img/down-arrow-active.svg) no-repeat 30px center
