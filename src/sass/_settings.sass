@@ -92,9 +92,29 @@ a
 
 // Классы валидатора
 div.invalid
-  display: none
+  position: absolute
+  top: -13px
+  left: 18px
+  color: tomato
+  font-size: 11px
+  text-transform: none
 input.invalid
   border: 2px solid tomato
+
+
+.policy
+  &__label
+    position: relative
+    .invalid
+      top: -13px
+      left: 25px
+.cards
+  &-policy
+    &__label
+      .invalid
+        top: -13px
+        left: 32px
+
 .policy__checkbox.invalid ~
   .policy__label
     &::before

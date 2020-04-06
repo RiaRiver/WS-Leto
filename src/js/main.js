@@ -7,14 +7,16 @@ $(document).ready(function () {
   var promoSwiper = new Swiper('.promo-swiper', {
     loop: true,
     autoplay: {
-      delay: 5000
+      delay: 5000,
+      disableOnInteraction: false
     },
     effect: 'fade',
     fadeEffect: {
       crossFade: true
     },
     pagination: {
-      el: '.promo-pagination'
+      el: '.promo-pagination',
+      clickable: true
     }
   })
 
@@ -128,13 +130,17 @@ $(document).ready(function () {
   $('[type=tel]').mask('+7 (000) 000-00-00')
 
   // Валидация формы
+  $.validator.messages.required = 'Заполните поле'
 
   $('form').each(function () {
     $(this).validate({
       errorElement: 'div',
       errorClass: 'invalid',
       errorPlacement: function (error, element) {
-        return true
+        if (element.attr('type') === 'checkbox') {
+          return element.next('label').append(error)
+        }
+        error.insertAfter($(element))
       },
       rules: {
         userName: {
@@ -145,6 +151,12 @@ $(document).ready(function () {
           minlength: 18
         },
         policyCheckbox: { required: true }
+      },
+      // Сообщения
+      messages: {
+        userPhone: {
+          minlength: 'Заполните поле'
+        }
       },
 
       submitHandler: function (form) {
@@ -177,7 +189,7 @@ $(document).ready(function () {
   $('nav').on('click', 'a', function (event) {
     var id = $(this).attr('href')
 
-    if (id === '#') {
+    if (id === '#' || id.includes('html')) {
       return
     }
 
