@@ -37,24 +37,42 @@
   <!-- /Yandex.Metrika counter -->
 
   <header class="header">
-    <div class="container">
+    <div class="container header__container">
       <div class="menu">
         <a href="index.html" class="logo menu__logo">
           <img src="img/logo.svg" alt="logo" class="logo__image">
         </a>
 
-        <button class="button header__club-choise button--outline">Выбрать клуб</button>
+        <div class="club-choise club-choise--active" data-toggle="club-choise">
+
+          <div class="branch header-branch header-branch--active">
+            <strong class="branch__title header-branch__title header-branch__title--active">Лето
+              «Мозаика»</strong>
+            <span class="branch__address header-branch__address">Москва, 7-я
+              Кожуховская ул., 9</span>
+          </div>
+
+          <div class="drop-down">
+            <a href="schelkovo.html" class="branch header-branch">
+              <strong class="branch__title header-branch__title">Лето «Щелково»</strong>
+              <span class="branch__address header-branch__address">г. Щелково, ул.
+                Советская, д. 16</span>
+            </a>
+          </div>
+        </div>
 
         <div class="header__visit-signup" data-toggle="visit">Записаться на<br>бесплатный визит
         </div>
 
         <div class="contact header__contact">
-          <span class="contact__label">Звоните круглосуточно!</span>
-          <a href="tel:+74952660278" class="contact__number phone-number">+7 (495) 266 02 78</a>
+          <span class="contact__label header-contact__label">Звоните круглосуточно!</span>
+          <a href="tel:+74952660278" class="contact__number header-contact__number phone-number">+7
+            (495) 266 02 78</a>
         </div>
         <!-- /.contact menu__contact -->
         <button class="button header__button button--primary" data-toggle="callback">Перезвоните
           мне</button>
+        <div class="menu-button" data-toggle="menu"></div>
       </div>
       <!-- /.menu -->
     </div>
@@ -62,7 +80,7 @@
 
     <nav class="nav header-nav">
       <div class="container header-nav__container">
-        <a href="#clubs" class="header-nav__item nav__item">Клубы</a>
+        <a href="index.html#clubs" class="header-nav__item nav__item">Клубы</a>
         <span class="separator"></span>
         <a href="#services" class="header-nav__item nav__item">Услуги</a>
         <span class="separator"></span>
@@ -85,12 +103,12 @@
   <!-- /.header -->
 
   <main>
-    <section class="section promo">
+    <div class="section promo">
 
       <!-- Swiper -->
       <div class="swiper-container promo-swiper swiper-no-swiping">
         <div class="swiper-wrapper">
-          <div class="swiper-slide promo-slide">
+          <div class="swiper-slide promo-slide promo-slide--bg1">
             <div class="container promo-slide__container">
               <div class="promo-slide__title promo-slide__title--frame-1">
                 <span class="promo-slide__overheading">2 круглосуточные</span>
@@ -111,7 +129,7 @@
           </div>
           <!-- /.swiper-slide promo-slide -->
 
-          <div class="swiper-slide promo-slide">
+          <div class="swiper-slide promo-slide promo-slide--bg2">
             <div class="container promo-slide__container">
               <div
                 class="promo-slide__title promo-slide__title--frame-2 promo-slide__title--size-2">
@@ -126,11 +144,42 @@
           </div>
           <!-- /.swiper-slide promo-slide -->
 
-          <div class="swiper-slide promo-slide"></div>
+          <div class="swiper-slide promo-slide promo-slide--bg1">
+            <div class="container promo-slide__container">
+              <div class="promo-slide__title promo-slide__title--frame-1">
+                <span class="promo-slide__overheading">2 круглосуточные</span>
+                <strong class="promo-slide__heading">клубные карты</strong>
+                <span class="promo-slide__subheading">за 22 000 <span
+                    class="rub">&#8381;</span></span>
+              </div>
+              <!-- /.promo-slide__title -->
+              <p class="promo-slide__text">
+                Только до 31 августа!<br>
+                Закажите карту по телефону:<br>
+                <a href="tel:+74952660248" class="promo-slide__text--medium phone-number">+7 (495)
+                  266-02-48</a>
+              </p>
+            </div>
+            <!-- /.container promo-slide__container -->
+            <img src="img/promo/promo-1.png" alt="promo slide" class="promo-slide__image">
+          </div>
+          <!-- /.swiper-slide promo-slide -->
 
-          <div class="swiper-slide promo-slide"></div>
+          <div class="swiper-slide promo-slide promo-slide--bg2">
+            <div class="container promo-slide__container">
+              <div
+                class="promo-slide__title promo-slide__title--frame-2 promo-slide__title--size-2">
+                <span class="promo-slide__overheading">открытый чемпионат</span>
+                <strong class="promo-slide__heading">по бодибилдингу</strong>
+                <span class="promo-slide__subheading">приз 200 000 &#8381;</span>
+              </div>
+              <!-- /.promo-slide__title -->
+            </div>
+            <!-- /.container promo-slide__container -->
+            <img src="img/promo/promo-2.png" alt="promo slide" class="promo-slide__image">
+          </div>
+          <!-- /.swiper-slide promo-slide -->
 
-          <div class="swiper-slide promo-slide"></div>
         </div>
         <!-- /.swiper-wrapper -->
 
@@ -138,14 +187,14 @@
         <div class="swiper-pagination promo-pagination"></div>
       </div>
       <!-- /.swiper-container promo-swiper -->
-    </section>
+    </div>
     <!-- /.section promo -->
 
     <div class="breadcrumbs">
       <div class="container breadcrumbs__container">
         <a href="index.html" class="breadcrumbs__link">Главная</a>
         <span class="breadcrumbs__separator"></span>
-        <a href="index.html/#clubs" class="breadcrumbs__link">Клубы</a>
+        <a href="index.html#clubs" class="breadcrumbs__link">Клубы</a>
         <span class="breadcrumbs__separator"></span>
         <span class="breadcrumbs__current">Лето «Мозаика»</span>
       </div>
@@ -225,7 +274,8 @@
             <span class="club-advantages__title">СПА Зона</span>
           </div>
           <div class="club-advantages__item">
-            <img src="img/advantages/crossfit.png" alt="advantage icon" class="club-advantages__icon">
+            <img src="img/advantages/crossfit.png" alt="advantage icon"
+              class="club-advantages__icon">
 
             <span class="club-advantages__title">Кроссфит</span>
           </div>
@@ -235,11 +285,11 @@
             <span class="club-advantages__title">Фитнес бар</span>
           </div>
           <div class="club-advantages__item">
-            <img src="img/advantages/massage.png" alt="advantage icon" class="club-advantages__icon">
+            <img src="img/advantages/massage.png" alt="advantage icon"
+              class="club-advantages__icon">
 
             <span class="club-advantages__title">Массажный кабинет</span>
           </div>
-
 
         </div>
         <!-- /.row club-advantages -->
@@ -250,7 +300,7 @@
 
     <section class="section cards cards--branch" id="cards">
       <div class="container">
-        <h3 class="section__heading">Выбрать карту</h3>
+        <h2 class="section__heading">Выбрать карту</h2>
         <div class="row cards__row">
           <div class="col-31 cards__col-1 cards__col-1--branch">
             <div class="cards-image cards-image--branch">
@@ -313,11 +363,18 @@
               </div>
               <!-- /.cards__periods -->
 
-              <input type="text" name="userName" class="input form__input cards__input"
-                id="cards-user-name" placeholder="Ваше имя*" autocomplete="off">
+              <div class="input-group">
+                <input type="text" name="userName" class="input form__input cards__input input--ph"
+                  id="cards-user-name" autocomplete="off" required>
+                <label for="cards-user-name" class="input-label">Ваше имя<span>*</span></label>
+              </div>
 
-              <input type="tel" name="userPhone" class="input form__input cards__input"
-                id="cards-user-phone" placeholder="Ваш номер телефона*" autocomplete="off">
+              <div class="input-group">
+                <input type="tel" name="userPhone" class="input form__input cards__input input--ph"
+                  id="cards-user-phone" autocomplete="off" required>
+                <label for="cards-user-phone" class="input-label">Ваш номер
+                  телефона<span>*</span></label>
+              </div>
 
               <div class="form-group">
                 <div class="policy cards-policy cards-policy--branch">
@@ -342,21 +399,46 @@
     </section>
     <!-- /.section cards -->
 
-
     <section class="section gallery" id="gallery">
-      <h3 class="section__heading">Фотогалерея</h3>
+      <h2 class="section__heading">Фотогалерея</h2>
       <div class="gallery-bg">
         <div class="container gallery__container">
           <!-- <div class="gallery-swiper-cover"> -->
           <div class="swiper-container gallery-swiper swiper-no-swiping">
             <div class="swiper-wrapper">
               <div class="swiper-slide gallery-slide">
-                <img src="img/gallery/gallery-1.png" alt="gallery slide" class="gallery-slide__image">
+                <img src="img/gallery/gallery-1.png" alt="gallery slide"
+                  class="gallery-slide__image">
               </div>
               <!-- /.swiper-slide gallery-slide -->
 
               <div class="swiper-slide gallery-slide">
-                <img src="img/gallery/gallery-1.png" alt="gallery slide" class="gallery-slide__image">
+                <img src="img/gallery/gallery-2.jpg" alt="gallery slide"
+                  class="gallery-slide__image">
+              </div>
+              <!-- /.swiper-slide gallery-slide -->
+
+              <div class="swiper-slide gallery-slide">
+                <img src="img/gallery/gallery-3.jpg" alt="gallery slide"
+                  class="gallery-slide__image">
+              </div>
+              <!-- /.swiper-slide gallery-slide -->
+
+              <div class="swiper-slide gallery-slide">
+                <img src="img/gallery/gallery-4.jpg" alt="gallery slide"
+                  class="gallery-slide__image">
+              </div>
+              <!-- /.swiper-slide gallery-slide -->
+
+              <div class="swiper-slide gallery-slide">
+                <img src="img/gallery/gallery-5.jpg" alt="gallery slide"
+                  class="gallery-slide__image">
+              </div>
+              <!-- /.swiper-slide gallery-slide -->
+
+              <div class="swiper-slide gallery-slide">
+                <img src="img/gallery/gallery-6.jpg" alt="gallery slide"
+                  class="gallery-slide__image">
               </div>
               <!-- /.swiper-slide gallery-slide -->
             </div>
@@ -600,7 +682,6 @@
       <div class="footer__info">
         <span class="copyright">© Фитнес-центр «Лето», 2017. Все права защищены.</span>
 
-        
         <div class="social">
           <a href="https://vk.com/" class="social__link" target="_blank">
             <img src="img/social/vk.svg" alt="vk">
@@ -679,7 +760,7 @@
         </div>
         <!-- /.policy -->
 
-        <button class="button form__button button--primary popup__button">Pаписаться</button>
+        <button class="button form__button button--primary popup__button">записаться</button>
       </form>
       <!-- /.form popup__form -->
     </div>

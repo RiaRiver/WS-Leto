@@ -21,6 +21,10 @@
       width: 48%
       margin-bottom: 20px
 
+  .club-choise
+    &--active
+      margin: 0 auto
+
 @media screen and ( max-width: 992px )
   html
     font-size: 12px
@@ -41,14 +45,38 @@
       order: 1
       width: 80%
       margin-top: 20px
+  
 
 @media screen and ( max-width: 768px )
+  .menu-button
+    display: block
+    width: 30px
+    height: 34px
+    border: 2px solid #ffd11a
+    border-radius: 2px
+    background: linear-gradient(to right, #ffd11a, #ffd11a) no-repeat, linear-gradient(to right, #ffd11a, #ffd11a) no-repeat, linear-gradient(to right, #ffd11a, #ffd11a) no-repeat
+    background-size: 20px 2px
+    background-position: top 6px center, top 14px center, bottom 6px center
+        
   .header
     &__button 
       display: none
 
     &-nav
       display: none
+      position: absolute
+      top: 88px
+      right: 0
+      opacity: 1
+      z-index: 15
+      width: 130px
+      border-bottom-left-radius: 20px
+      &__container
+        flex-direction: column
+        align-items: center
+      &__item
+        font-size: 12px
+        padding: 3px 0
 
   .promo
     &-slide
@@ -74,6 +102,14 @@
     order: 0
     margin-bottom: 20px
 
+  .gallery
+    &__container
+      padding: 0
+    &-button
+      &-next,
+      &-prev
+        display: none
+
   .cards
     &__row
       flex-direction: column
@@ -90,11 +126,13 @@
     &-nav
       width: 95%
 
+  .club-choise
+    &--active
+      display: none
 
 @media screen and ( max-width: 576px )
-  .header
-    &__club-choise
-      display: none
+  .club-choise
+    display: none
 
   .promo
     &-slide
@@ -114,13 +152,11 @@
   .input
     flex-basis: 100%
 
-
   .swiper-container-horizontal>.swiper-pagination-bullets
     bottom: 5%
     
   .footer
-    &__club-choise
-      display: none
+
     &-nav
       &__block
         margin-left: auto
@@ -142,6 +178,15 @@
     width: 53%
     text-align: center
 
+  .header
+    &__contact
+      margin: auto
+    &-contact
+      &__label
+        font-size: 8px
+      &__number
+        font-size: 12px
+
 @media screen and ( max-width: 375px ), screen and ( max-height: 375px )
   .popup__close,
   .popup-send__close
@@ -152,7 +197,6 @@
       background-color: #1e1c34
   .popup-send__close
     top: 15px
-
 
 //Hober эффекты только на ПК. Запрос поддерживается во всех основных браузерах, и как бонус, корректно работает на Blackberry и в Opera Mini
 // февраль 2018

@@ -4,21 +4,26 @@
   max-height: 541px
   min-height: 163px
   background: linear-gradient(to right, #561a36 0%, #1e1c34 100%)
-  &::before
-    position: absolute
-    top: 0
-    left: 0
-    content: ''
-    height: 100%
-    width: 100%
-    background: url('../img/promo/promo-bg.png') no-repeat center
-    opacity: 0.2
-  
+
   &-swiper
     height: 100%
     &>.swiper-pagination-bullets
       bottom: 10.15%
   &-slide
+    &::before
+      position: absolute
+      top: 0
+      left: 0
+      content: ''
+      height: 100%
+      width: 100%
+      opacity: 0.2
+    &--bg1
+      &::before
+        background: url('../img/promo/promo-bg-1.png') no-repeat center/cover
+    &--bg2
+      &::before
+        background: url('../img/promo/promo-bg-2.png') no-repeat center/cover
     &__container
       position: relative
       padding-top: 4.1%
@@ -83,6 +88,3 @@
 
 .rub
   font-family: Tahoma, Geneva, sans-serif
-
-
-

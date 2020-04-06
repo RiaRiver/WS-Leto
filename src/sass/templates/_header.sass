@@ -1,9 +1,33 @@
 .header
   background: linear-gradient(to right, #561a36 0%, #1e1c34 100%)
+  &__container
+    position: static
   &__club-choise
-    margin: 0 7% 0 auto
     padding: rem(16px) rem(32px) rem(16px) 57px
     background: url(../img/down-arrow.svg) no-repeat 30px center
+   
+    &:focus
+      outline: none
+      box-shadow: none
+
+  &-branch
+    color: #1e1c34
+    font-size: 14px
+    margin-bottom: 20px
+    display: block
+    &--active
+      color: $light
+      margin-bottom: 0
+      font-size: 15px
+      background: none
+      
+    &__title
+      font-size: 14px
+      margin-bottom: 4px
+      font-weight: 700
+      &--active
+        font-size: 15px
+        color: $primary
   &__visit-signup
     margin-right: 6%
     padding-left: 45px
@@ -37,7 +61,41 @@
   justify-content: space-between
   align-items: center
 
-
+.menu-button
+  display: none
 
 .separator
   border-left: 1px dotted rgba($light, 0.3)
+
+.club-choise
+  margin: 0 7% 0 auto
+  &--active
+    display: flex
+    align-items: center
+    margin: 0px 6% 0 auto
+    cursor: pointer
+    &::before
+      content: ''
+      width: 32px
+      height: 32px
+      border: 1px solid $primary
+      border-radius: 50%
+      background: url(../img/down-arrow.svg) no-repeat center
+      margin-right: 17px
+
+.drop-down
+  display: none
+  background-color: $primary
+  position: absolute
+  z-index: 15
+  width: 293px
+  padding: 29px 0 32px 54px
+  border-radius: 4px
+  top: 67px
+
+.button.active
+  border-bottom-left-radius: 0
+  border-bottom-right-radius: 0
+  background-color: #ffd11a
+  color: #1e1c34
+  background: #ffd11a url(../img/down-arrow-active.svg) no-repeat 30px center

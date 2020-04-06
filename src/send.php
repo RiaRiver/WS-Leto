@@ -6,11 +6,9 @@ $policyCheckbox = $_POST['policyCheckbox'];
 $cardPeriod = $_POST['period'];
 $club = $_POST['club'];
 
-
 require 'phpmailer/PHPMailer.php';
 require 'phpmailer/Exception.php';
 require 'phpmailer/SMTP.php';
-
 
 // Instantiation and passing `true` enables exceptions
 $mail = new PHPMailer\PHPMailer\PHPMailer(true);
@@ -30,7 +28,6 @@ try {
     //Recipients
     $mail->setFrom('wsrepdes@gmail.com', 'Спорт-клуб "Лето"');
     $mail->addAddress('riria.river@gmail.com');
-
 
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML

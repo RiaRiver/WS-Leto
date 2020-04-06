@@ -5,18 +5,22 @@ $(document).ready(function () {
 
   // Promo Slider
   var promoSwiper = new Swiper('.promo-swiper', {
+    loop: true,
+    autoplay: {
+      delay: 5000
+    },
     effect: 'fade',
     fadeEffect: {
       crossFade: true
     },
     pagination: {
-      el: '.promo-pagination',
-      clickable: true
+      el: '.promo-pagination'
     }
   })
 
   // Services Slider
   var servicesSwiper = new Swiper('.services-swiper', {
+    noSwiping: false,
     slidesPerView: 'auto',
     spaceBetween: 13,
     // slidesPerGroup: 1,
@@ -26,6 +30,13 @@ $(document).ready(function () {
     navigation: {
       nextEl: '.services-button-next',
       prevEl: '.services-button-prev'
+    },
+    // Responsive breakpoints
+    breakpoints: {
+    // when window width is >= 768px
+      768: {
+        noSwiping: true
+      }
     }
   })
 
@@ -51,7 +62,7 @@ $(document).ready(function () {
   // Gallery Slider
   var gallerySwiper = new Swiper('.gallery-swiper', {
     loop: true,
-
+    noSwiping: false,
     navigation: {
       nextEl: '.gallery-button-next',
       prevEl: '.gallery-button-prev'
@@ -59,6 +70,13 @@ $(document).ready(function () {
     pagination: {
       el: '.gallery-pagination',
       clickable: true
+    },
+    // Responsive breakpoints
+    breakpoints: {
+    // when window width is >= 768px
+      768: {
+        noSwiping: true
+      }
     }
   })
 
@@ -227,6 +245,41 @@ $(document).ready(function () {
       $('body').append('<script src="https://api-maps.yandex.ru/2.1/?apikey=0270f6eb-6b95-4e8d-814c-d0ac51ccb2f9&lang=ru_RU"></script>')
       yaMapInit = true
       initYaMap(1)
+    }
+  })
+
+  // Выбор клуба
+
+  const clubBtn = $('[data-toggle=club-choise]')
+  const dropDown = $('.drop-down')
+
+  clubBtn.on('click', function () {
+    if (!$(this).is('.active')) {
+      $(this).addClass('active')
+      dropDown.slideDown(300)
+    } else {
+      $(this).removeClass('active')
+      dropDown.slideUp(300)
+    }
+  })
+
+  // Кнопка мобильного меню
+
+  const menuBtn = $('[data-toggle=menu]')
+  const mobMenu = $('.header-nav')
+  const menuLink = $('.header-nav__item')
+  function mobMenuClose () {
+    mobMenu.slideUp(300)
+    menuLink.unbind('click', mobMenuClose)
+    mobMenu.delay(500).queue(function () { $(this).css('display', ''); $(this).dequeue() })
+  }
+
+  menuBtn.on('click', function () {
+    if (mobMenu.is(':hidden')) {
+      mobMenu.slideDown(300)
+      menuLink.on('click', mobMenuClose)
+    } else {
+      mobMenuClose()
     }
   })
 })
