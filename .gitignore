@@ -138,4 +138,6 @@ $RECYCLE.BIN/
 #CSS artifacts
 style.css
 
+!css/style.css
+
 # End of https://www.gitignore.io/api/node,windows
